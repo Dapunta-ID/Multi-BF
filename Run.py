@@ -1,7 +1,7 @@
-# coding by kalldev & TamsisSlebew
-# dibuat (selasa,30-mei,2023)
+# Coding By Kalldev & TamsisSlebew
+# Di Buat (selasa,30-mei,2023)
 
-#kalo mau nyomot jangan lupain nama author ya :v
+# Kalo Mau Nyomot Jangan Lupain Nama Author Ya :v
 
 #> MODULE UTAMA
 import os, sys, re, time, requests, calendar, random, bs4, uuid, json, subprocess
