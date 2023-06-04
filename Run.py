@@ -77,10 +77,10 @@ def clear():
 
 def login():
       global data,data2
-      clear();cetak(Panel('''  %s __  __      _ _   _     ___ ___ 
- |  \/  |_  _| | |_(_)___| _ ) __|
- | |\/| | || | |  _| |___| _ \ _| 
- |_|  |_|\_,_|_|\__|_|   |___/_|  
+      clear();cetak(Panel('''  %s _______ _     _        _______ _____     ______  _______
+ |  |  | |     | |         |      |   ___ |_____] |______
+ |  |  | |_____| |_____    |    __|__     |_____] |      
+                                                         
 '''%(K1),width=75,style='bold white'))
       cetak(Panel('    %sMasukan Cookie Facebook Saran Ekstensi %s"Cookiedough" %sKiwi Browser'%(K1,H1,K1),width=75,style='bold white'))
       cok = Console().input('%s[%s•%s] Masukan Cookie :%s '%(P1,H1,P1,H1))
@@ -124,10 +124,10 @@ def ceklogin():
       menu(nama,idfb,kelamin,ttl,number)
 
 def menu(an,ai,at,ag,ar):
-      clear();cetak(Panel('''  %s __  __      _ _   _     ___ ___ 
- |  \/  |_  _| | |_(_)___| _ ) __|
- | |\/| | || | |  _| |___| _ \ _| 
- |_|  |_|\_,_|_|\__|_|   |___/_|  
+      clear();cetak(Panel('''  %s _______ _     _        _______ _____     ______  _______
+ |  |  | |     | |         |      |   ___ |_____] |______
+ |  |  | |_____| |_____    |    __|__     |_____] |      
+                                                         
 '''%(K1),width=75,style='bold white'))
       cetak(Panel('             %sWelcome User Di Script BruteForce Facebook'%(K1),width=75,style='bold white'))
       wadok.append(Panel('''%s[%s•%s] Nama    : %s
