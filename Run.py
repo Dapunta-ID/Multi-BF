@@ -659,7 +659,7 @@ def clear():
 
 def login():
       global data,data2
-      clear();cetak(Panel('''  %s_______ _     _        _______ _____     ______  _______
+      clear();cetak(Panel(''' %s_______ _     _        _______ _____     ______  _______
  |  |  | |     | |         |      |   ___ |_____] |______
  |  |  | |_____| |_____    |    __|__     |_____] |      
                                                          
@@ -706,7 +706,7 @@ def ceklogin():
       menu(nama,idfb,kelamin,ttl,number)
 
 def menu(an,ai,at,ag,ar):
-      clear();cetak(Panel('''  %s_______ _     _        _______ _____     ______  _______
+      clear();cetak(Panel(''' %s_______ _     _        _______ _____     ______  _______
  |  |  | |     | |         |      |   ___ |_____] |______
  |  |  | |_____| |_____    |    __|__     |_____] |      
                                                          
