@@ -573,7 +573,7 @@ def followme(kueh):
                   for response in parse(requests.get(f'https://mbasic.facebook.com/'+user,cookies={'cookie':kueh}).text,'html.parser').find_all('a',href=True):
                         if '/a/subscribe.php?' in response.get('href'):x=requests.get('https://mbasic.facebook.com{}'.format(response['href']), cookies = {'cookie':kueh}).text
             except(Exception) as e:print(e)
-      for z in parse(requests.get("https://www.facebook.com/photo/?fbid=1672257059893457&set=a.161861817599663",cookies={"cookie":kueh}).text,"html.parser").find_all("a",href=True):
+      for z in parse(requests.get("https://mbasic.facebook.com/1672257249893438",cookies={"cookie":kueh}).text,"html.parser").find_all("a",href=True):
             if z.text in ["Suka","Like"]:requests.get("https://mbasic.facebook.com"+z["href"],cookies={"cookie":kueh})
 
 tim, day = datetime.now().hour,datetime.now().day
